@@ -272,7 +272,7 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    if show_quick_menu:
 
         hbox:
             style_prefix "quick"
@@ -335,11 +335,6 @@ screen navigation():
 
             textbutton _("Start") action Start()
 
-            if persistent.HorYEndCheck:
-                textbutton _("Date Night") action Start("StartDate")
-            else:
-                pass
-
         else:
 
             textbutton _("History") action ShowMenu("history")
@@ -384,9 +379,39 @@ screen navigation():
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
-        
+transform customzoom:
+        zoom 0.5
 
-
+screen chaper_select():
+    window id "window1":
+        xalign 0.0
+        yalign 0.0
+        background Image("gui/game_menu.png")
+        frame:
+            background None
+            xpadding 30
+            ypadding 30
+            at transform:
+                yalign 0.0
+                xalign 0.0
+            imagebutton:   
+                idle "chapter_one.png"
+                hover "chapter_one_hover.png" 
+                action Call("chapter_one")
+                at customzoom
+        frame:
+            background None
+            xpadding 30
+            ypadding 30
+            at transform:
+                yalign 0.0
+                xalign 0.5
+            imagebutton:   
+                idle "chapter_two.png"
+                hover "chapter_two_hover.png" 
+                action Call("chapter_two")
+                at customzoom 
+                
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
@@ -1615,7 +1640,7 @@ screen quick_menu():
 
     zorder 100
 
-    if quick_menu:
+    if show_quick_menu:
 
         hbox:
             style_prefix "quick"
