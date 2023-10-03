@@ -15,7 +15,7 @@ init python:
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Do Not Kill Me Jacob Extra")
+define config.name = _("Do Not Backstab Me Jacob")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -33,9 +33,9 @@ define config.version = "1.2.3"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-Writing and Programming by {a=https://twitter.com/B0redBradley}BoredBradley{/a}
+Writing and Programming by Stevemc32, PokeRen and {a=https://twitter.com/B0redBradley}BoredBradley{/a}
 
-Writing and Character Art by {a=https://linktr.ee/sound.skies}Soundskies{/a}
+Writing and Art by Muriel and {a=https://linktr.ee/sound.skies}Soundskies{/a}
 
 Writing, Background Art, and Programming by {a=https://twitter.com/Very_Bixarre}#1 Jacob simp (Bixarre){/a}
 
@@ -55,7 +55,7 @@ Fonts Jackwrite by {a=https://jack-daw.com/fonts/}Jack Dew{/a} and Fidalga by {a
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "JacobExtra"
+define build.name = "DoNotBackstabMeJacob"
 
 
 ## Sounds and music ############################################################
@@ -165,7 +165,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "DoNotKillMeJacobExtra-1687554026"
+define config.save_directory = "DoNotBackstabMeJacobExtra-1687554026"
 
 init python:
     config.has_autosave = False
