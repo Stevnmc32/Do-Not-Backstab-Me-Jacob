@@ -22,6 +22,8 @@ label start:
     stop music fadeout 1.0
     $ show_quick_menu = False
     $ rng = renpy.random.randint(1,10)
+    python:
+        y_name = renpy.transform_text(renpy.input("Name your victim", length=32),upper)
 
     if persistent.Endings > 0:
         $ qpick = renpy.random.randint(1, 3) #Uncomment later
@@ -39,10 +41,32 @@ label start:
 
     else:
         $ qpick = 1
-
-    "TODO: add prologue"
-
-    ""
+    
+    "TODO: add attic setting"
+    "TODO: add sound effects"
+    scene black #attic
+    with Dissolve(1.0)
+    stop music fadeout 1.0
+    js "Any luck?"
+    yn "Nope"
+    js "They’ve gotta be here somewhere, we just need to keep looking!"
+    yn "Yeah, yeah, I-"
+    js "Pearl? You ok?"
+    yn "Yeah, I just found something weird..."
+    js "Alright, if you say so."
+    yn "...who’s Jacob?"
+    js "What did you-"
+    js "Ooh, VHS tapes! I wonder what they’ve got on them-"
+    yn "If you’ll excuse me-"
+    scene black #vcr player
+    with Dissolve(1.0)
+    stop music fadeout 1.0
+    yn "...Why does it say my old name?"
+    yn "I wonder if this is why I can’t remember."
+    yn "Guess I should watch them?"
+    scene black
+    with Dissolve(1.0)
+    stop music fadeout 1.0
 
 label select:
     $ show_quick_menu = False

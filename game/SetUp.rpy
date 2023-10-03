@@ -214,13 +214,22 @@ init python:
         elif event == "slow_done":
             renpy.sound.stop()
 
+init python:
+    def upper(s):
+        return s.upper()
+
+
+
 # Names
-define y = Character("JOSS")
+#define y = Character("JOSS")
 define j = Character("JACOB", color= "#782222", callback=jacob_voice)
-define ju = Character("JULY", color= "#703e59", callback=july_voice)
-define h = Character("HANK", color= "#34547d", callback=hank_voice)
-define pog = Character("JAMES", color= "#356334", callback=james_voice)
-define n = nvl_narrator
+#define ju = Character("JULY", color= "#703e59", callback=july_voice)
+#define h = Character("HANK", color= "#34547d", callback=hank_voice)
+#define pog = Character("JAMES", color= "#356334", callback=james_voice)
+default y_name = "YOUR NAME"
+define yn = DynamicCharacter('y_name', color="#6f0b0b")
+define js = Character("JESSE", color="#035600")
+#define n = nvl_narrator
 
 
 ## Misc Transforms #############################################################
